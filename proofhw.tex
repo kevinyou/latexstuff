@@ -1,0 +1,35 @@
+\documentclass{article}
+\title{TITLE}
+\author{NAME}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumerate}
+
+% Define theorem variants here
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+% Define convenient commands here
+\newcommand*\conj[1]{\bar{#1}}
+
+\pagestyle{fancy}
+\lhead{\today}
+\chead{TITLE}
+\rhead{NAME}
+
+\begin{document}
+	\section*{Problem 1}
+    \begin{theorem}
+        Problem statement
+    \end{theorem}
+    \begin{proof}
+        Proof.
+        \begin{align*}
+            0 &< 1 \tag{Annotation} \\
+            &\leq 2 
+        \end{align*}
+    \end{proof}
+	
+	
+\end{document}
