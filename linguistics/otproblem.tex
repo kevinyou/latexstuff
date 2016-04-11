@@ -1,0 +1,35 @@
+\documentclass{article}
+\author{NAME}
+\title{TITLE}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{tipa}
+\usepackage{tikz}
+\usepackage{ot-tableau}
+\ShadingOn
+
+\pagestyle{fancy}
+\lhead{\today}
+\chead{TITLE}
+\rhead{NAME}
+
+\begin{document}
+            Hasse Diagram \\
+                \begin{tikzpicture}
+                    \node (a) at (5,3) {CONST1}; 
+                    \node (b) at (5,2) {CONST2)};
+                    \node (c) at (5,1) {CONST3}; 
+                    \node (d) at (5,0) {CONST4}; 
+
+                    \draw [thick] (a) -- (b) -- (c) -- (d);
+                \end{tikzpicture}
+
+                        \begin{tableau}{c|c|c|s}
+                            \inp{Input: \ipa{latEk}}		\const{CONST1}	\const{CONST2}	\const{CONST3} 	\const{CONST4}
+                            \cand{latEk}					\vio{}		\vio{*!}		\vio{}		\vio{}
+                            \cand[$\rightarrow$]{atEk}		\vio{}		\vio{}		\vio{*}		\vio{*}
+                            \cand{latE}		\vio{}		\vio{}		\vio{**!}		\vio{**}
+                            \cand{atE}			\vio{*!}		\vio{}		\vio{}		\vio{*}
+                        \end{tableau}
+
+\end{document}
