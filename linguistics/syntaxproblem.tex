@@ -1,0 +1,45 @@
+\documentclass{article}
+\author{NAME}
+\title{TITLE}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\usepackage{qtree}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\itshape,
+	xleftmargin=3em,
+	literate={->}{$\rightarrow$}{2}
+	{NP_sg}{${{NP}_{sg}}$}{4}
+	{NP_pl}{${{NP}_{pl}}$}{4}
+	{N_sg}{${{N}_{sg}}$}{3}
+	{N_pl}{${{N}_{sg}}$}{3}
+}
+
+
+\pagestyle{fancy}
+\lhead{\today}
+\chead{TITLE}
+\rhead{NAME}
+
+\begin{document}
+	\begin{lstlisting}
+	S -> NP_sg VP
+	   | NP_pl VP
+	VP -> V NP_sg 
+	    | V NP_pl
+	NP_sg -> DT N_sg
+	NP_pl -> DT N_pl
+	
+	DT -> {the}
+	N_sg -> {boat}
+	N_pl -> {old}
+	V -> {man}
+	\end{lstlisting}
+	
+	\Tree [.S [.NP_{pl} [.DT The ] [.N_{pl} old ] ] [.VP [.V man ] [.NP_{sg} [.DT the ] [.N_{sg} boat ] ] ] ]
+	
+\end{document}
