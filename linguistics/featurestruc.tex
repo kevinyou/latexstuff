@@ -4,8 +4,11 @@
 \usepackage{enumerate}
 \usepackage{fancyhdr}
 
+\usepackage{graphicx}
 \usepackage{qtree}
-\usepackage{listings}
+\usepackage{avm}
+
+% see http://nlp.stanford.edu/manning/tex/ for full documentation
 
 \pagestyle{fancy}
 \lhead{\today}
@@ -13,5 +16,18 @@
 \rhead{NAME}
 
 \begin{document}
-	
+	\avmsortfont{\it}
+	\begin{avm}
+		\[ \asort{word}
+		SYN & \[ HEAD & noun \] \\
+		SEM & \[ MODE & ref \\
+				 INDEX & \@1 \\
+				 RESTR & \< \[RELN & \bf name \\
+							  NAME & Kim \\
+							  NAMED & \@1
+						    \]
+					     \> 
+			  \]
+		\]
+	\end{avm}
 \end{document}
